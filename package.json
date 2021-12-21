@@ -3,7 +3,9 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "start": "node server.js"
+        "start": "node server.js",
+        "build:image":"docker build -t docker-demo .",
+        "run:image":"docker run --name myserve -d -p 9001:3000 docker-demo"
     },
     "dependencies": {
         "koa": "^2.5.0"
